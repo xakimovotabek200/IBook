@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Bookshelf from "../Book/Book";
 import "./Navbar.css";
 import {
   DesktopOutlined,
@@ -76,7 +77,7 @@ const App = () => {
             }}
           >
             <div className="Main">
-              
+              <Bookshelf />
             </div>
           </div>
         </Content>
