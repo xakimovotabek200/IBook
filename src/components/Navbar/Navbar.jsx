@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import Bookshelf from "../Book/Book";
+import Book from "../Book/Book";
 import "./Navbar.css";
 import {
   DesktopOutlined,
   FileOutlined,
   PieChartOutlined,
-  TeamOutlined,
   UserOutlined,
 } from "@ant-design/icons";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
@@ -20,10 +19,9 @@ function getItem(label, key, icon, children) {
 }
 const items = [
   getItem("Home", "1", <PieChartOutlined />),
-  getItem("Pages 2", "2", <DesktopOutlined />),
-  getItem("User", "sub1", <UserOutlined />, [getItem("Tom", "1")]),
-  getItem("Team", "sub2", <TeamOutlined />, [getItem("Team 1", "1")]),
-  getItem("Files", "9", <FileOutlined />),
+  getItem("Pages 2", "2", <DesktopOutlined/>),
+  getItem("User", "3", <UserOutlined />, [getItem("Tom", "4")]),
+  getItem("Files", "5", <FileOutlined />),
 ];
 const App = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -77,7 +75,7 @@ const App = () => {
             }}
           >
             <div className="Main">
-              <Bookshelf />
+              <Book />
             </div>
           </div>
         </Content>
